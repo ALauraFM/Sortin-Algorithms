@@ -39,7 +39,6 @@ int main(void) {
   clock_t end_time = clock();
   double total_time = (double)(end_time - start_time) * 1000.0 / CLOCKS_PER_SEC; // Multiplica por 1000 para obter milissegundos
 
-
   printf("Array ordenado:\n");
   print(array, n);
   printf("Tempo total de execução: %.2f milissegundos\n", total_time);
@@ -70,20 +69,21 @@ void BucketSort(int arr[], int n, int num_buckets) {
     printf("\n");
   }
   */
+  
 
  
   for (i = 0; i < num_buckets; ++i) {
     buckets[i] = InsertionSort(buckets[i]);
   }//ordena os baldes usando a função insertion sort
-  /*
-  printf("-------------\n");
+  
+  /*printf("-------------\n");
   printf("Bucktets after sorting\n");
   for (i = 0; i < num_buckets; i++) {
     printf("Bucket[%d]: ", i);
     printBuckets(buckets[i]);
     printf("\n");
-  }
-  */
+  }*/
+  
 
   for (j = 0, i = 0; i < num_buckets; ++i) { //loop pra percorrer todos os baldes, i - balde
     struct Node *node;
