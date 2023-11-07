@@ -22,10 +22,10 @@ void BucketSort(int arr[])
   int i, j;
   struct Node **buckets;
 
-  // Create buckets and allocate memory size
+  // Criar os buckets e alocar a memória deles
   buckets = (struct Node **)calloc(NBUCKET, sizeof(struct Node *));
 
-  // Fill the buckets with respective elements
+  // Preencher os buckets com seus respectivos elementos
   for (i = 0; i < NARRAY; ++i) {
     struct Node *current;
     int pos = getBucketIndex(arr[i]); // Funcao que calcula o bucket apropriado
