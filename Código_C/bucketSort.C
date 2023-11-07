@@ -23,12 +23,7 @@ void BucketSort(int arr[])
   struct Node **buckets;
 
   // Create buckets and allocate memory size
-  buckets = (struct Node **)malloc(sizeof(struct Node *) * NBUCKET);
-
-  // Initialize empty buckets
-  for (i = 0; i < NBUCKET; ++i) {
-    buckets[i] = NULL;
-  }
+  buckets = (struct Node **)calloc(NBUCKET, sizeof(struct Node *));
 
   // Fill the buckets with respective elements
   for (i = 0; i < NARRAY; ++i) {
