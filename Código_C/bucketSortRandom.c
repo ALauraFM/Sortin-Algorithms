@@ -61,12 +61,12 @@ void BucketSort(int arr[], int n, int num_buckets) {
     buckets[pos] = current;
   }//aloca em cada balde, os elementos do array, baseado na função getindex
 
-  /*for (i = 0; i < num_buckets; i++) {
+  for (i = 0; i < num_buckets; i++) {
     printf("Bucket[%d]: ", i);
     printBuckets(buckets[i]);
     printf("\n");
   }
-  */
+ 
   
 
  
@@ -74,13 +74,13 @@ void BucketSort(int arr[], int n, int num_buckets) {
     buckets[i] = InsertionSort(buckets[i]);
   }//ordena os baldes usando a função insertion sort
   
-  /*printf("-------------\n");
+  printf("-------------\n");
   printf("Bucktets after sorting\n");
   for (i = 0; i < num_buckets; i++) {
     printf("Bucket[%d]: ", i);
     printBuckets(buckets[i]);
     printf("\n");
-  }*/
+  }
   
 
   for (j = 0, i = 0; i < num_buckets; ++i) { //loop pra percorrer todos os baldes, i - balde
