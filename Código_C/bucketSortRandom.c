@@ -29,8 +29,8 @@ int main(void) {
   int array[n];
   generateRandomArray(array, n, n);
 
-  //printf("Array gerado aleatoriamente:\n");
-  //print(array, n);
+  printf("Array gerado aleatoriamente:\n");
+  print(array, n);
 
   clock_t start_time = clock();
 
@@ -49,10 +49,8 @@ int main(void) {
 void BucketSort(int arr[], int n, int num_buckets) {
   int i, j;
   struct Node **buckets;
-  buckets = (struct Node **)malloc(sizeof(struct Node *) * num_buckets);
-  for (i = 0; i < num_buckets; ++i) {
-    buckets[i] = NULL;
-  } //cria baldes vazios e aloca a memória deles
+  buckets = (struct Node **)calloc(num_buckets, sizeof(struct Node *));
+   //cria baldes vazios e aloca a memória deles
 
   for (i = 0; i < n; ++i) {
     struct Node *current;
